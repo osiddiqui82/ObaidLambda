@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
     env: 
-      working-directory: ./DemoAWSLambda
+      #working-directory: ./DemoAWSLambda
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     
@@ -66,6 +66,6 @@ jobs:
         aws-secret-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
         dotnet-version: '8.x'
-        template-file-path: ./src/NET8/template.yaml
+        template-file-path: ./net8/template.yaml
         stack-name: net-8-base
         s3-bucket-name: aws-dotnet-lambda-testing
